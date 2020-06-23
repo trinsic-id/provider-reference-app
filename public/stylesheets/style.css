@@ -1,0 +1,134 @@
+:root {
+  --primary-color: #006BE5;
+  --secondary-color: #FD5D58;
+  --third-color: #FFE770;
+  --dark-color: #20262D;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#navbar {
+  background-color: var(--primary-color);
+}
+
+.nav-element {
+  color: white;
+}
+
+#logo {
+  height: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.content {
+  height: 100%;
+  width: 100%;
+  margin: 40px;
+  padding: 40px 40px 0 40px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.submit-button {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+
+.top-margin {
+  margin: 20px 0 0 0;
+}
+
+#spinner {
+  text-align: center;
+  align-content: center;
+}
+
+.content-header {
+  margin-bottom: 30px;
+}
+
+.inline {
+  display: inline;
+}
+
+.large-col {
+  width: 175px;
+}
+
+.small-col {
+  width: 20px;
+}
+
+.org-image {
+  width: 40px;
+}
+
+.refresh-button {
+  margin-left: 10px;
+}
+
+.clickable-text {
+  color: var(--secondary-color);
+}
+
+.clickable-text:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.table-button {
+  padding: 0 5px;
+}
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: var(--dark-color); /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}

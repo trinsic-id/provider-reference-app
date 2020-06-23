@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Provider Reference App</title>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="javascripts/index.js"></script>
+</head>
+
+<body>
+
+<!--Navbar-->
+<nav id="navbar" class="navbar navbar-dark">
+  <a class="navbar-brand nav-element" href="#">Provider Reference App</a>
+  <a class="nav-link nav-element navbar-text" href="https://trinsic.id" target="_blank"><img id="logo" src="images/trinsicLogo.png" alt="trinsic-logo"/></a>
+</nav>
+
+<!--Body-->
+<div class="container">
+  <div class="row">
+    <div class="col-3">
+      <div class="content">
+        <h4 class="content-header">Create a New Organization</h4>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name">
+        </div>
+        <div class="form-group">
+          <label for="network">Network</label>
+          <select id="network" class="form-control">
+            <option selected>Sovrin Staging</option>
+            <option>Sovrin Builder</option>
+            <option>BCovrin Test</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary submit-button top-margin" onclick="createOrganization()">CREATE</button>
+      </div>
+    </div>
+    <div class="col"></div>
+    <div class="col-8">
+      <div class="content">
+        <div class="content-header">
+          <h4 class="inline">Your Organizations</h4>
+          <button type="submit" class="btn btn-primary submit-button float-right" onclick="refreshOrganizations()">REFRESH TABLE</button>
+        </div>
+        <table class="table" id="table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Name</th>
+              <th scope="col">Network</th>
+              <th scope="col">Access Token</th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody id="table-body"></tbody>
+        </table>
+        <div class="centered-spinner d-flex justify-content-center">
+          <div id="spinner" class="spinner-border centered-spinner" role="status">
+            <span class="sr-only centered-spinner">Loading...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Snackbar -->
+<div id="snackbar">Copied the Access Token to Clipboard</div>
+
+<script>
+  const orgName = document.getElementById('name');
+  const orgNetwork = document.getElementById('network');
+  const spinner = document.getElementById('spinner');
+  const tableBody = document.getElementById('table-body');
+  const snackbar = document.getElementById('snackbar');
+  refreshOrganizations();
+</script>
+
+<!-- FontAwesome CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="stylesheets/style.css">
+</body>
+
+</html>
