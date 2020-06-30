@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
 
-const { ManagementServiceClient, Credentials } = require('@streetcred.id/service-clients');
+const { ProviderServiceClient, ProviderCredentials } = require('@trinsic/service-clients');
 require('dotenv').config();
 
 
-const client = new ManagementServiceClient(
-    new Credentials(process.env.PROVIDER_TOKEN, ''),
+const client = new ProviderServiceClient(
+    new ProviderCredentials(process.env.PROVIDER_TOKEN),
     { noRetryPolicy: true });
 
 router.post('/organizations', async function (req, res) {
