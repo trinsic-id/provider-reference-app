@@ -11,21 +11,22 @@ This sample is to simulate a dashboard to manage organizations in your Trinsic S
 ## Setup 
 
 ### Download project and install dependencies 
- 1. Clone the repository
-    - `git clone https://github.com/streetcred-id/provider-reference-app`
- 2. Navigate into the directory
-    - `cd provider-reference-app`
- 3. Install the dependencies
-    - `npm install`
- 4. Open up the project in a code editor of your choice
- 5. Rename the `.env-template` file to `.env`
- ![empty .env](assets/emptyEnv.png)
+1. Clone the repository
+- `git clone https://github.com/streetcred-id/provider-reference-app`
+2. Navigate into the directory
+- `cd provider-reference-app`
+3. Install the dependencies
+- `npm install`
+4. Open up the project in a code editor of your choice
+5. Rename the `.env-template` file to `.env`
+![empty .env](assets/emptyEnv.png)
  
-### Retrieve your Provider Token
- 1. Go to <a href="https://studio.trinsic.id" target="_blank">Trinsic Studio</a> and login or create an account.
- 2. Visit <a href="https://studio.trinsic.id/token" target="_blank">studio.trinsic.id/token</a> and copy the string on the screen. This is a secure access token; do not lose it or share it with anyone as it provides access to manage the organizations on your account.
- ![token screen](assets/token.png) 
- 3. In the .env file, add your organization's Provider Token to the `PROVIDER_TOKEN` field.
+### Retrieve your Provider Key
+1. Go to <a href="https://studio.trinsic.id" target="_blank">Trinsic Studio</a> and login or create an account.
+2. Click on the account dropdown in the top-right of the screen and select the **Provider Keys** link.
+3. Click the **+ NEW KEY** button and enter a name for the key. Then click on the **CREATE** button.
+![token screen](assets/token.png) 
+4. **COPY THE KEY** and paste it into the `PROVIDER_TOKEN` value in the .env file. You will not be able to see this key once the slider is closed, so be sure to copy it.
 
 ## Run the web app
  
