@@ -7,7 +7,7 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
-    "@trinsic/service-clients": "^1.1.3745",
+    "@trinsic/service-clients": "^1.1.3977",
     "body-parser": "^1.19.0",
     "cookie-parser": "~1.4.4",
     "cors": "^2.8.5",
