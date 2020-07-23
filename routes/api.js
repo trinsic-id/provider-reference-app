@@ -11,12 +11,10 @@ const client = new ProviderServiceClient(
 
 router.post('/organizations', async function (req, res) {
   let params = {
-    tenantParameters: {
-      name: req.body.name,
-      imageUrl: req.body.imageUrl,
-      networkId: req.body.networkId,
-      endorserType: req.body.endorserType
-    }
+    name: req.body.name,
+    imageUrl: req.body.imageUrl,
+    networkId: req.body.networkId,
+    endorserType: req.body.endorserType
   }
   await client.createTenant(params);
   res.sendStatus(200);
