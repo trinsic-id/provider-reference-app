@@ -14,7 +14,8 @@ router.post('/organizations', async function (req, res) {
     name: req.body.name,
     imageUrl: req.body.imageUrl,
     networkId: req.body.networkId,
-    endorserType: req.body.endorserType
+    endorserType: req.body.endorserType,
+    region: "UnitedStates"
   }
   await client.createTenant(params);
   res.sendStatus(200);
