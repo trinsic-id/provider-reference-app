@@ -12,7 +12,7 @@ This sample is to simulate a dashboard to manage organizations in your Trinsic S
 
 ### Download project and install dependencies 
 1. Clone the repository
-- `git clone https://github.com/streetcred-id/provider-reference-app`
+- `git clone https://github.com/trinsic-id/provider-reference-app`
 2. Navigate into the directory
 - `cd provider-reference-app`
 3. Install the dependencies
